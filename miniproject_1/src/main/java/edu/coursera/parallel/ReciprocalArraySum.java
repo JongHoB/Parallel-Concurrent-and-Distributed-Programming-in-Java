@@ -1,6 +1,8 @@
 package edu.coursera.parallel;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.RecursiveAction;
 import java.util.concurrent.ForkJoinPool;
 
@@ -132,14 +134,18 @@ public final class ReciprocalArraySum {
         @Override
         protected void compute() {
             // TODO
-            if (this.endIndexExclusive - this.startIndexInclusive <= this.LENGTH) {
-                this.value = seqArraySum(this.input);
-            } else if (this.startIndexInclusive > this.endIndexExclusive) {
+            if (endIndexExclusive - startIndexInclusive <= LENGTH) {
+//                this.value = seqArraySum(Arrays.copyOfRange(input,startIndexInclusive,endIndexExclusive));
+                for(int i=startIndexInclusive;i<endIndexExclusive;i++)
+                {
+                    this.value += 1 / input[i];
+                }
+            } else if (startIndexInclusive > endIndexExclusive) {
                 this.value = 0;
             } else {
-                int mid = (this.endIndexExclusive + this.startIndexInclusive) / 2;
-                ReciprocalArraySumTask right = new ReciprocalArraySumTask(mid, this.endIndexExclusive, this.input);
-                ReciprocalArraySumTask left = new ReciprocalArraySumTask(this.startIndexInclusive, mid, this.input);
+                int mid = (endIndexExclusive + startIndexInclusive) / 2;
+                ReciprocalArraySumTask right = new ReciprocalArraySumTask(mid, endIndexExclusive, input);
+                ReciprocalArraySumTask left = new ReciprocalArraySumTask(startIndexInclusive, mid, input);
 
                 right.fork();
                 left.compute();
@@ -199,16 +205,17 @@ public final class ReciprocalArraySum {
         //
         // return sum;
 
-        ReciprocalArraySumTask tasks[] = new ReciprocalArraySumTask[numTasks];
-        for (int i = 0; i < numTasks; i++) {
-            tasks[i] = new ReciprocalArraySumTask(getChunkStartInclusive(i, numTasks, input.length),
-                    getChunkEndExclusive(i, numTasks, input.length), input);
-        }
-        Arrays.stream(tasks).forEach(t->ForkJoinPool.commonPool().invoke(t));
-
+        ArrayList<ReciprocalArraySumTask> tasks=new ArrayList<>();
         for(int i=0;i<numTasks;i++)
         {
-            sum+=tasks[i].getValue();
+            tasks.add(new ReciprocalArraySumTask(getChunkStartInclusive(i,numTasks, input.length),getChunkEndExclusive(i,numTasks,input.length),input));
+        }
+//        ForkJoinTask.invokeAll(tasks);
+        tasks.forEach(t->ForkJoinPool.commonPool().invoke(t));
+
+        for(ReciprocalArraySumTask task:tasks)
+        {
+            sum+=task.getValue();
         }
         return sum;
     }
