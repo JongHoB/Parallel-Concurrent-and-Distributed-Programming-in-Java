@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.coursera.distributed.SparkTest" time="1.347" tests="6" errors="6" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="17.0.8+9-LTS-211"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/jhb/Desktop/Project/Java_mooc/1.Parallel_Concurrent_and Distributed Programming in Java/3.Parallel_Concurrent_and Distributed Programming in Java/miniproject_1"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="user.country" value="KR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/jhb/Desktop/Project/Java_mooc/1.Parallel_Concurrent_and Distributed Programming in Java/3.Parallel_Concurrent_and Distributed Programming in Java/miniproject_1"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="17.0.8+9-LTS-211"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.io.tmpdir" value="/var/folders/9l/ld0yn7k162ggw2x67rnl0d5w0000gn/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/opt/homebrew/Cellar/maven/3.9.6/libexec/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/jhb/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="maven.conf" value="/opt/homebrew/Cellar/maven/3.9.6/libexec/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="14.4.1"/>
+    <property name="library.jansi.path" value="/opt/homebrew/Cellar/maven/3.9.6/libexec/lib/jansi-native"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|lx.astxsvc.com|*.lx.astxsvc.com"/>
+    <property name="user.home" value="/Users/jhb"/>
+    <property name="user.timezone" value="Asia/Seoul"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="user.name" value="jhb"/>
+    <property name="java.class.path" value="/opt/homebrew/Cellar/maven/3.9.6/libexec/boot/plexus-classworlds-2.7.0.jar"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home"/>
+    <property name="user.language" value="ko"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="17.0.8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="sun.stderr.encoding" value="UTF-8"/>
+    <property name="maven.home" value="/opt/homebrew/Cellar/maven/3.9.6/libexec"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2023-07-18"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.stdout.encoding" value="UTF-8"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|lx.astxsvc.com|*.lx.astxsvc.com"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|lx.astxsvc.com|*.lx.astxsvc.com"/>
+  </properties>
+  <testcase name="testUniformTwentyThousand" classname="edu.coursera.distributed.SparkTest" time="1.004">
+    <error message="Job aborted due to stage failure: Task serialization failed: java.lang.reflect.InvocationTargetException&#10;java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)&#10;java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)&#10;java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)&#10;org.apache.spark.io.CompressionCodec$.createCodec(CompressionCodec.scala:72)&#10;org.apache.spark.io.CompressionCodec$.createCodec(CompressionCodec.scala:65)&#10;org.apache.spark.broadcast.TorrentBroadcast.org$apache$spark$broadcast$TorrentBroadcast$$setConf(TorrentBroadcast.scala:73)&#10;org.apache.spark.broadcast.TorrentBroadcast.&lt;init&gt;(TorrentBroadcast.scala:80)&#10;org.apache.spark.broadcast.TorrentBroadcastFactory.newBroadcast(TorrentBroadcastFactory.scala:34)&#10;org.apache.spark.broadcast.BroadcastManager.newBroadcast(BroadcastManager.scala:63)&#10;org.apache.spark.SparkContext.broadcast(SparkContext.scala:1326)&#10;org.apache.spark.scheduler.DAGScheduler.submitMissingTasks(DAGScheduler.scala:1006)&#10;org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:921)&#10;org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)&#10;org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)&#10;scala.collection.immutable.List.foreach(List.scala:318)&#10;org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)&#10;org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)&#10;org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)&#10;scala.collection.immutable.List.foreach(List.scala:318)&#10;org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)&#10;org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)&#10;org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)&#10;scala.collection.immutable.List.foreach(List.scala:318)&#10;org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)&#10;org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)&#10;org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)&#10;scala.collection.immutable.List.foreach(List.scala:318)&#10;org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)&#10;org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)&#10;org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)&#10;scala.collection.immutable.List.foreach(List.scala:318)&#10;org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)&#10;org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)&#10;org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)&#10;scala.collection.immutable.List.foreach(List.scala:318)&#10;org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)&#10;org.apache.spark.scheduler.DAGScheduler.handleJobSubmitted(DAGScheduler.scala:861)&#10;org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1607)&#10;org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1599)&#10;org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1588)&#10;org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)&#10;" type="org.apache.spark.SparkException"><![CDATA[org.apache.spark.SparkException: Job aborted due to stage failure: Task serialization failed: java.lang.reflect.InvocationTargetException
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+org.apache.spark.io.CompressionCodec$.createCodec(CompressionCodec.scala:72)
+org.apache.spark.io.CompressionCodec$.createCodec(CompressionCodec.scala:65)
+org.apache.spark.broadcast.TorrentBroadcast.org$apache$spark$broadcast$TorrentBroadcast$$setConf(TorrentBroadcast.scala:73)
+org.apache.spark.broadcast.TorrentBroadcast.<init>(TorrentBroadcast.scala:80)
+org.apache.spark.broadcast.TorrentBroadcastFactory.newBroadcast(TorrentBroadcastFactory.scala:34)
+org.apache.spark.broadcast.BroadcastManager.newBroadcast(BroadcastManager.scala:63)
+org.apache.spark.SparkContext.broadcast(SparkContext.scala:1326)
+org.apache.spark.scheduler.DAGScheduler.submitMissingTasks(DAGScheduler.scala:1006)
+org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:921)
+org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)
+org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)
+scala.collection.immutable.List.foreach(List.scala:318)
+org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)
+org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)
+org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)
+scala.collection.immutable.List.foreach(List.scala:318)
+org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)
+org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)
+org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)
+scala.collection.immutable.List.foreach(List.scala:318)
+org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)
+org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)
+org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)
+scala.collection.immutable.List.foreach(List.scala:318)
+org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)
+org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)
+org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)
+scala.collection.immutable.List.foreach(List.scala:318)
+org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)
+org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)
+org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)
+scala.collection.immutable.List.foreach(List.scala:318)
+org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)
+org.apache.spark.scheduler.DAGScheduler.handleJobSubmitted(DAGScheduler.scala:861)
+org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1607)
+org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1599)
+org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1588)
+org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1431)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1419)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1418)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1418)
+	at org.apache.spark.scheduler.DAGScheduler.submitMissingTasks(DAGScheduler.scala:1016)
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:921)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)
+	at org.apache.spark.scheduler.DAGScheduler.handleJobSubmitted(DAGScheduler.scala:861)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1607)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1599)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1588)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:620)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1832)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1845)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1858)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1929)
+	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:927)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:150)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:111)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:316)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:926)
+	at org.apache.spark.api.java.JavaRDDLike$class.collect(JavaRDDLike.scala:339)
+	at org.apache.spark.api.java.AbstractJavaRDDLike.collect(JavaRDDLike.scala:46)
+	at edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:182)
+	at edu.coursera.distributed.SparkTest.testUniformTwentyThousand(SparkTest.java:239)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.apache.spark.io.CompressionCodec$.createCodec(CompressionCodec.scala:72)
+	at org.apache.spark.io.CompressionCodec$.createCodec(CompressionCodec.scala:65)
+	at org.apache.spark.broadcast.TorrentBroadcast.org$apache$spark$broadcast$TorrentBroadcast$$setConf(TorrentBroadcast.scala:73)
+	at org.apache.spark.broadcast.TorrentBroadcast.<init>(TorrentBroadcast.scala:80)
+	at org.apache.spark.broadcast.TorrentBroadcastFactory.newBroadcast(TorrentBroadcastFactory.scala:34)
+	at org.apache.spark.broadcast.BroadcastManager.newBroadcast(BroadcastManager.scala:63)
+	at org.apache.spark.SparkContext.broadcast(SparkContext.scala:1326)
+	at org.apache.spark.scheduler.DAGScheduler.submitMissingTasks(DAGScheduler.scala:1006)
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:921)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:924)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$org$apache$spark$scheduler$DAGScheduler$$submitStage$4.apply(DAGScheduler.scala:923)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$submitStage(DAGScheduler.scala:923)
+	at org.apache.spark.scheduler.DAGScheduler.handleJobSubmitted(DAGScheduler.scala:861)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1607)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1599)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1588)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+Caused by: java.lang.IllegalArgumentException: org.xerial.snappy.SnappyError: [FAILED_TO_LOAD_NATIVE_LIBRARY] no native library is found for os.name=Mac and os.arch=aarch64
+	at org.apache.spark.io.SnappyCompressionCodec$.liftedTree1$1(CompressionCodec.scala:171)
+	at org.apache.spark.io.SnappyCompressionCodec$.org$apache$spark$io$SnappyCompressionCodec$$version$lzycompute(CompressionCodec.scala:168)
+	at org.apache.spark.io.SnappyCompressionCodec$.org$apache$spark$io$SnappyCompressionCodec$$version(CompressionCodec.scala:168)
+	at org.apache.spark.io.SnappyCompressionCodec.<init>(CompressionCodec.scala:152)
+	... 43 more
+Caused by: org.xerial.snappy.SnappyError: [FAILED_TO_LOAD_NATIVE_LIBRARY] no native library is found for os.name=Mac and os.arch=aarch64
+	at org.xerial.snappy.SnappyLoader.findNativeLibrary(SnappyLoader.java:331)
+	at org.xerial.snappy.SnappyLoader.loadNativeLibrary(SnappyLoader.java:171)
+	at org.xerial.snappy.SnappyLoader.load(SnappyLoader.java:152)
+	at org.xerial.snappy.Snappy.<clinit>(Snappy.java:46)
+	at org.apache.spark.io.SnappyCompressionCodec$.liftedTree1$1(CompressionCodec.scala:169)
+	... 46 more
+]]></error>
+    <system-err><![CDATA[Running the PageRank algorithm for 5 iterations on a website graph of 20000 websites
+
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+24/05/19 15:15:06 INFO PlatformDependent: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+24/05/19 15:15:06 INFO Remoting: Starting remoting
+24/05/19 15:15:06 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.0.10:50217]
+]]></system-err>
+  </testcase>
+  <testcase name="testUniformFiftyThousand" classname="edu.coursera.distributed.SparkTest" time="0.212">
+    <error message="Only one SparkContext may be running in this JVM (see SPARK-2243). To ignore this error, set spark.driver.allowMultipleContexts = true. The currently running SparkContext was created at:&#10;org.apache.spark.api.java.JavaSparkContext.&lt;init&gt;(JavaSparkContext.scala:59)&#10;edu.coursera.distributed.SparkTest.getSparkContext(SparkTest.java:38)&#10;edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:170)&#10;edu.coursera.distributed.SparkTest.testUniformTwentyThousand(SparkTest.java:239)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#10;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#10;java.base/java.lang.reflect.Method.invoke(Method.java:568)&#10;junit.framework.TestCase.runTest(TestCase.java:164)&#10;junit.framework.TestCase.runBare(TestCase.java:130)&#10;junit.framework.TestResult$1.protect(TestResult.java:106)&#10;junit.framework.TestResult.runProtected(TestResult.java:124)&#10;junit.framework.TestResult.run(TestResult.java:109)&#10;junit.framework.TestCase.run(TestCase.java:120)&#10;junit.framework.TestSuite.runTest(TestSuite.java:230)&#10;junit.framework.TestSuite.run(TestSuite.java:225)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#10;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#10;java.base/java.lang.reflect.Method.invoke(Method.java:568)" type="org.apache.spark.SparkException"><![CDATA[org.apache.spark.SparkException: Only one SparkContext may be running in this JVM (see SPARK-2243). To ignore this error, set spark.driver.allowMultipleContexts = true. The currently running SparkContext was created at:
+org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)
+edu.coursera.distributed.SparkTest.getSparkContext(SparkTest.java:38)
+edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:170)
+edu.coursera.distributed.SparkTest.testUniformTwentyThousand(SparkTest.java:239)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.base/java.lang.reflect.Method.invoke(Method.java:568)
+junit.framework.TestCase.runTest(TestCase.java:164)
+junit.framework.TestCase.runBare(TestCase.java:130)
+junit.framework.TestResult$1.protect(TestResult.java:106)
+junit.framework.TestResult.runProtected(TestResult.java:124)
+junit.framework.TestResult.run(TestResult.java:109)
+junit.framework.TestCase.run(TestCase.java:120)
+junit.framework.TestSuite.runTest(TestSuite.java:230)
+junit.framework.TestSuite.run(TestSuite.java:225)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.spark.SparkContext$$anonfun$assertNoOtherContextIsRunning$1.apply(SparkContext.scala:2257)
+	at org.apache.spark.SparkContext$$anonfun$assertNoOtherContextIsRunning$1.apply(SparkContext.scala:2239)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.SparkContext$.assertNoOtherContextIsRunning(SparkContext.scala:2239)
+	at org.apache.spark.SparkContext$.setActiveContext(SparkContext.scala:2325)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:2197)
+	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)
+	at edu.coursera.distributed.SparkTest.getSparkContext(SparkTest.java:38)
+	at edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:170)
+	at edu.coursera.distributed.SparkTest.testUniformFiftyThousand(SparkTest.java:250)
+]]></error>
+    <system-err><![CDATA[Running the PageRank algorithm for 5 iterations on a website graph of 50000 websites
+
+]]></system-err>
+  </testcase>
+  <testcase name="testRandomTwentyThousand" classname="edu.coursera.distributed.SparkTest" time="0.019">
+    <error message="Only one SparkContext may be running in this JVM (see SPARK-2243). To ignore this error, set spark.driver.allowMultipleContexts = true. The currently running SparkContext was created at:&#10;org.apache.spark.api.java.JavaSparkContext.&lt;init&gt;(JavaSparkContext.scala:59)&#10;edu.coursera.distributed.SparkTest.getSparkContext(SparkTest.java:38)&#10;edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:170)&#10;edu.coursera.distributed.SparkTest.testUniformTwentyThousand(SparkTest.java:239)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#10;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#10;java.base/java.lang.reflect.Method.invoke(Method.java:568)&#10;junit.framework.TestCase.runTest(TestCase.java:164)&#10;junit.framework.TestCase.runBare(TestCase.java:130)&#10;junit.framework.TestResult$1.protect(TestResult.java:106)&#10;junit.framework.TestResult.runProtected(TestResult.java:124)&#10;junit.framework.TestResult.run(TestResult.java:109)&#10;junit.framework.TestCase.run(TestCase.java:120)&#10;junit.framework.TestSuite.runTest(TestSuite.java:230)&#10;junit.framework.TestSuite.run(TestSuite.java:225)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#10;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#10;java.base/java.lang.reflect.Method.invoke(Method.java:568)" type="org.apache.spark.SparkException"><![CDATA[org.apache.spark.SparkException: Only one SparkContext may be running in this JVM (see SPARK-2243). To ignore this error, set spark.driver.allowMultipleContexts = true. The currently running SparkContext was created at:
+org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)
+edu.coursera.distributed.SparkTest.getSparkContext(SparkTest.java:38)
+edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:170)
+edu.coursera.distributed.SparkTest.testUniformTwentyThousand(SparkTest.java:239)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.base/java.lang.reflect.Method.invoke(Method.java:568)
+junit.framework.TestCase.runTest(TestCase.java:164)
+junit.framework.TestCase.runBare(TestCase.java:130)
+junit.framework.TestResult$1.protect(TestResult.java:106)
+junit.framework.TestResult.runProtected(TestResult.java:124)
+junit.framework.TestResult.run(TestResult.java:109)
+junit.framework.TestCase.run(TestCase.java:120)
+junit.framework.TestSuite.runTest(TestSuite.java:230)
+junit.framework.TestSuite.run(TestSuite.java:225)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.spark.SparkContext$$anonfun$assertNoOtherContextIsRunning$1.apply(SparkContext.scala:2257)
+	at org.apache.spark.SparkContext$$anonfun$assertNoOtherContextIsRunning$1.apply(SparkContext.scala:2239)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.SparkContext$.assertNoOtherContextIsRunning(SparkContext.scala:2239)
+	at org.apache.spark.SparkContext$.markPartiallyConstructed(SparkContext.scala:2312)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:91)
+	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)
+	at edu.coursera.distributed.SparkTest.getSparkContext(SparkTest.java:38)
+	at edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:170)
+	at edu.coursera.distributed.SparkTest.testRandomTwentyThousand(SparkTest.java:283)
+]]></error>
+    <system-err><![CDATA[Running the PageRank algorithm for 5 iterations on a website graph of 20000 websites
+
+]]></system-err>
+  </testcase>
+  <testcase name="testRandomFiftyThousand" classname="edu.coursera.distributed.SparkTest" time="0.052">
+    <error message="Only one SparkContext may be running in this JVM (see SPARK-2243). To ignore this error, set spark.driver.allowMultipleContexts = true. The currently running SparkContext was created at:&#10;org.apache.spark.api.java.JavaSparkContext.&lt;init&gt;(JavaSparkContext.scala:59)&#10;edu.coursera.distributed.SparkTest.getSparkContext(SparkTest.java:38)&#10;edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:170)&#10;edu.coursera.distributed.SparkTest.testUniformTwentyThousand(SparkTest.java:239)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#10;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#10;java.base/java.lang.reflect.Method.invoke(Method.java:568)&#10;junit.framework.TestCase.runTest(TestCase.java:164)&#10;junit.framework.TestCase.runBare(TestCase.java:130)&#10;junit.framework.TestResult$1.protect(TestResult.java:106)&#10;junit.framework.TestResult.runProtected(TestResult.java:124)&#10;junit.framework.TestResult.run(TestResult.java:109)&#10;junit.framework.TestCase.run(TestCase.java:120)&#10;junit.framework.TestSuite.runTest(TestSuite.java:230)&#10;junit.framework.TestSuite.run(TestSuite.java:225)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#10;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#10;java.base/java.lang.reflect.Method.invoke(Method.java:568)" type="org.apache.spark.SparkException"><![CDATA[org.apache.spark.SparkException: Only one SparkContext may be running in this JVM (see SPARK-2243). To ignore this error, set spark.driver.allowMultipleContexts = true. The currently running SparkContext was created at:
+org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)
+edu.coursera.distributed.SparkTest.getSparkContext(SparkTest.java:38)
+edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:170)
+edu.coursera.distributed.SparkTest.testUniformTwentyThousand(SparkTest.java:239)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.base/java.lang.reflect.Method.invoke(Method.java:568)
+junit.framework.TestCase.runTest(TestCase.java:164)
+junit.framework.TestCase.runBare(TestCase.java:130)
+junit.framework.TestResult$1.protect(TestResult.java:106)
+junit.framework.TestResult.runProtected(TestResult.java:124)
+junit.framework.TestResult.run(TestResult.java:109)
+junit.framework.TestCase.run(TestCase.java:120)
+junit.framework.TestSuite.runTest(TestSuite.java:230)
+junit.framework.TestSuite.run(TestSuite.java:225)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.spark.SparkContext$$anonfun$assertNoOtherContextIsRunning$1.apply(SparkContext.scala:2257)
+	at org.apache.spark.SparkContext$$anonfun$assertNoOtherContextIsRunning$1.apply(SparkContext.scala:2239)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.SparkContext$.assertNoOtherContextIsRunning(SparkContext.scala:2239)
+	at org.apache.spark.SparkContext$.markPartiallyConstructed(SparkContext.scala:2312)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:91)
+	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)
+	at edu.coursera.distributed.SparkTest.getSparkContext(SparkTest.java:38)
+	at edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:170)
+	at edu.coursera.distributed.SparkTest.testRandomFiftyThousand(SparkTest.java:294)
+]]></error>
+    <system-err><![CDATA[Running the PageRank algorithm for 5 iterations on a website graph of 50000 websites
+
+]]></system-err>
+  </testcase>
+  <testcase name="testIncreasingTwentyThousand" classname="edu.coursera.distributed.SparkTest" time="0.015">
+    <error message="Only one SparkContext may be running in this JVM (see SPARK-2243). To ignore this error, set spark.driver.allowMultipleContexts = true. The currently running SparkContext was created at:&#10;org.apache.spark.api.java.JavaSparkContext.&lt;init&gt;(JavaSparkContext.scala:59)&#10;edu.coursera.distributed.SparkTest.getSparkContext(SparkTest.java:38)&#10;edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:170)&#10;edu.coursera.distributed.SparkTest.testUniformTwentyThousand(SparkTest.java:239)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#10;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#10;java.base/java.lang.reflect.Method.invoke(Method.java:568)&#10;junit.framework.TestCase.runTest(TestCase.java:164)&#10;junit.framework.TestCase.runBare(TestCase.java:130)&#10;junit.framework.TestResult$1.protect(TestResult.java:106)&#10;junit.framework.TestResult.runProtected(TestResult.java:124)&#10;junit.framework.TestResult.run(TestResult.java:109)&#10;junit.framework.TestCase.run(TestCase.java:120)&#10;junit.framework.TestSuite.runTest(TestSuite.java:230)&#10;junit.framework.TestSuite.run(TestSuite.java:225)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#10;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#10;java.base/java.lang.reflect.Method.invoke(Method.java:568)" type="org.apache.spark.SparkException"><![CDATA[org.apache.spark.SparkException: Only one SparkContext may be running in this JVM (see SPARK-2243). To ignore this error, set spark.driver.allowMultipleContexts = true. The currently running SparkContext was created at:
+org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)
+edu.coursera.distributed.SparkTest.getSparkContext(SparkTest.java:38)
+edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:170)
+edu.coursera.distributed.SparkTest.testUniformTwentyThousand(SparkTest.java:239)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.base/java.lang.reflect.Method.invoke(Method.java:568)
+junit.framework.TestCase.runTest(TestCase.java:164)
+junit.framework.TestCase.runBare(TestCase.java:130)
+junit.framework.TestResult$1.protect(TestResult.java:106)
+junit.framework.TestResult.runProtected(TestResult.java:124)
+junit.framework.TestResult.run(TestResult.java:109)
+junit.framework.TestCase.run(TestCase.java:120)
+junit.framework.TestSuite.runTest(TestSuite.java:230)
+junit.framework.TestSuite.run(TestSuite.java:225)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.spark.SparkContext$$anonfun$assertNoOtherContextIsRunning$1.apply(SparkContext.scala:2257)
+	at org.apache.spark.SparkContext$$anonfun$assertNoOtherContextIsRunning$1.apply(SparkContext.scala:2239)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.SparkContext$.assertNoOtherContextIsRunning(SparkContext.scala:2239)
+	at org.apache.spark.SparkContext$.markPartiallyConstructed(SparkContext.scala:2312)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:91)
+	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)
+	at edu.coursera.distributed.SparkTest.getSparkContext(SparkTest.java:38)
+	at edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:170)
+	at edu.coursera.distributed.SparkTest.testIncreasingTwentyThousand(SparkTest.java:261)
+]]></error>
+    <system-err><![CDATA[Running the PageRank algorithm for 5 iterations on a website graph of 20000 websites
+
+]]></system-err>
+  </testcase>
+  <testcase name="testIncreasingFiftyThousand" classname="edu.coursera.distributed.SparkTest" time="0.045">
+    <error message="Only one SparkContext may be running in this JVM (see SPARK-2243). To ignore this error, set spark.driver.allowMultipleContexts = true. The currently running SparkContext was created at:&#10;org.apache.spark.api.java.JavaSparkContext.&lt;init&gt;(JavaSparkContext.scala:59)&#10;edu.coursera.distributed.SparkTest.getSparkContext(SparkTest.java:38)&#10;edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:170)&#10;edu.coursera.distributed.SparkTest.testUniformTwentyThousand(SparkTest.java:239)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#10;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#10;java.base/java.lang.reflect.Method.invoke(Method.java:568)&#10;junit.framework.TestCase.runTest(TestCase.java:164)&#10;junit.framework.TestCase.runBare(TestCase.java:130)&#10;junit.framework.TestResult$1.protect(TestResult.java:106)&#10;junit.framework.TestResult.runProtected(TestResult.java:124)&#10;junit.framework.TestResult.run(TestResult.java:109)&#10;junit.framework.TestCase.run(TestCase.java:120)&#10;junit.framework.TestSuite.runTest(TestSuite.java:230)&#10;junit.framework.TestSuite.run(TestSuite.java:225)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#10;java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#10;java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#10;java.base/java.lang.reflect.Method.invoke(Method.java:568)" type="org.apache.spark.SparkException"><![CDATA[org.apache.spark.SparkException: Only one SparkContext may be running in this JVM (see SPARK-2243). To ignore this error, set spark.driver.allowMultipleContexts = true. The currently running SparkContext was created at:
+org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)
+edu.coursera.distributed.SparkTest.getSparkContext(SparkTest.java:38)
+edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:170)
+edu.coursera.distributed.SparkTest.testUniformTwentyThousand(SparkTest.java:239)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.base/java.lang.reflect.Method.invoke(Method.java:568)
+junit.framework.TestCase.runTest(TestCase.java:164)
+junit.framework.TestCase.runBare(TestCase.java:130)
+junit.framework.TestResult$1.protect(TestResult.java:106)
+junit.framework.TestResult.runProtected(TestResult.java:124)
+junit.framework.TestResult.run(TestResult.java:109)
+junit.framework.TestCase.run(TestCase.java:120)
+junit.framework.TestSuite.runTest(TestSuite.java:230)
+junit.framework.TestSuite.run(TestSuite.java:225)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.spark.SparkContext$$anonfun$assertNoOtherContextIsRunning$1.apply(SparkContext.scala:2257)
+	at org.apache.spark.SparkContext$$anonfun$assertNoOtherContextIsRunning$1.apply(SparkContext.scala:2239)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.SparkContext$.assertNoOtherContextIsRunning(SparkContext.scala:2239)
+	at org.apache.spark.SparkContext$.markPartiallyConstructed(SparkContext.scala:2312)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:91)
+	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)
+	at edu.coursera.distributed.SparkTest.getSparkContext(SparkTest.java:38)
+	at edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:170)
+	at edu.coursera.distributed.SparkTest.testIncreasingFiftyThousand(SparkTest.java:272)
+]]></error>
+    <system-err><![CDATA[Running the PageRank algorithm for 5 iterations on a website graph of 50000 websites
+
+]]></system-err>
+  </testcase>
+</testsuite>
