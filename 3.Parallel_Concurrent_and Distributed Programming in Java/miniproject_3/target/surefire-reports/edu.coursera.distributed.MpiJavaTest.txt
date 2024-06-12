@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: edu.coursera.distributed.MpiJavaTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.037 sec <<< FAILURE! - in edu.coursera.distributed.MpiJavaTest
+edu.coursera.distributed.MpiJavaTest(edu.coursera.distributed.MpiJavaTest$1)  Time elapsed: 0.036 sec  <<< ERROR!
+java.lang.UnsatisfiedLinkError: Can't load library: /var/folders/9l/ld0yn7k162ggw2x67rnl0d5w0000gn/T/jna-105188/jna1934672875592831528.tmp
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2393)
+	at java.base/java.lang.Runtime.load0(Runtime.java:755)
+	at java.base/java.lang.System.load(System.java:1953)
+	at com.sun.jna.Native.loadNativeDispatchLibraryFromClasspath(Native.java:851)
+	at com.sun.jna.Native.loadNativeDispatchLibrary(Native.java:826)
+	at com.sun.jna.Native.<clinit>(Native.java:140)
+	at edu.coursera.distributed.util.MPI$MPILib.<clinit>(MPI.java:20)
+	at edu.coursera.distributed.util.MPI.<init>(MPI.java:77)
+	at edu.coursera.distributed.MpiJavaTest$1.setUp(MpiJavaTest.java:66)
+
